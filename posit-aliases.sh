@@ -6,3 +6,4 @@ alias start="/usr/bin/rstudio-launcher start && /usr/sbin/rstudio-server start &
 alias diagnostic="/usr/sbin/rstudio-server run-diagnostics"
 alias license-status="/usr/sbin/rstudio-server license-manager status"
 alias logs='GREEN="\033[0;32m" && NC="\033[0m" && echo -e ${GREEN}"\n Posit Workbench Logs:\n"${NC} && tail -n 15 /var/log/rstudio/rstudio-server/rserver.log && echo -e ${GREEN}"\n Posit Launcher Logs:\n"${NC} && tail -n 15 /var/log/rstudio/launcher/rstudio-launcher.log'
+alias healthcheck='source <(curl -sSL https://raw.githubusercontent.com/SmugZombie/Posit-Scripts/refs/heads/main/healthcheck.sh)'
